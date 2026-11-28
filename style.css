@@ -40,6 +40,19 @@ button { font-family: inherit; cursor: pointer; }
   text-transform: uppercase;
 }
 
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #e5e1da;
+  border-bottom: 1px solid #e5e1da;
+}
+
 /* linha fina embaixo do topo */
 .header::before {
   content: "";
@@ -244,6 +257,14 @@ main { padding: 0 40px 40px; }
   display: block;
 }
 
+.produto img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
 .etiqueta {
   position: absolute;
   top: 10px;
@@ -252,6 +273,17 @@ main { padding: 0 40px 40px; }
   background: #fff;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  background: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  border-radius: 999px;
 }
 
 .informacoes {
@@ -320,4 +352,35 @@ main { padding: 0 40px 40px; }
   #inicio { grid-row: 4; padding-left: 20px; padding-right: 20px; }
   main { padding: 0 20px 40px; }
   .footer { grid-template-columns: 1fr; }
+}
+
+.btn-carrinho {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-carrinho svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn-carrinho:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.08);
 }
